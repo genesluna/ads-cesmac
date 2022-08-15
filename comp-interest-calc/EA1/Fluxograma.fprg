@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="genes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-08-14 10:24:18 "/>
+        <attribute name="created" value="Z2VuZXM7REVTS1RPUC1IT01FOzIwMjItMDgtMTQ7IjA5OjQzOjQwICI7MjYwNA=="/>
+        <attribute name="edited" value="Z2VuZXM7REVTS1RPUC1IT01FOzIwMjItMDgtMTQ7IjEwOjI0OjE4ICI7MTsyNzA4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="valorInicial, investimentoMensal, taxaJuros, valorFinal" type="Real" array="False" size=""/>
+            <declare name="anos, i" type="Integer" array="False" size=""/>
+            <input variable="valorInicial"/>
+            <input variable="investimentoMensal"/>
+            <input variable="anos"/>
+            <input variable="taxaJuros"/>
+            <assign variable="taxaJuros" expression="taxaJuros / 100"/>
+            <assign variable="valorFinal" expression="0"/>
+            <for variable="i" start="0" end="anos" direction="inc" step="1">
+                <if expression="valorFinal = 0">
+                    <then>
+                        <assign variable="valorFinal" expression="valorInicial"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="valorFinal" expression="(valorFinal + (investimentoMensal*12)) * (1 + taxaJuros)"/>
+            </for>
+            <output expression="&quot;Voc&#234; acumulou: &quot; &amp; valorFinal &amp; &quot; em &quot; &amp; anos &amp; &quot; anos&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
