@@ -1,4 +1,4 @@
-# Projeto referente à disciplina de pensamento computacional do curos de ADS do CEMAC
+# Projeto referente à disciplina de Pensamento Computacional do curso de ADS do CESMAC
 
 O projeto proposto é para desenvolver um aplicativo simples que possua o uso de variáveis, estruturas condicionais e de repetição. O projeto deverá ter, no máximo, vinte passos.
 
