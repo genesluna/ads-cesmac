@@ -1,4 +1,4 @@
-from PySide2.QtWidgets import QMainWindow
+from PySide2.QtWidgets import QMainWindow, QMessageBox
 from UI.ui_main_window import Ui_MainWindow
 from services import users_service as us
 import locale
@@ -53,6 +53,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def handle_withdraw(self):
         amount = float(self.txt_withdraw_amount.text())
+
+        if amount > self.user['balance']:
+            self.show_alert(
+                'Saldo infuficiente', 'O valor que você deseja sacar é maior que o saldo disponível.')
+            self.txt_withdraw_amount.setText('')
+            return None
+
         us.withdraw(self.user['id'], amount)
         self.refresh_user()
         self.lbl_acc_balance_withdraw.setText(
@@ -64,3 +71,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def format_currency(self, value):
         return str(locale.currency(value, grouping=True))
+
+    def show_alert(self, title, message):
+        alert = QMessageBox()
+        alert.setIcon(QMessageBox.Warning)
+        alert.setWindowTitle(title)
+        alert.setText(message)
+        alert.exec_()
