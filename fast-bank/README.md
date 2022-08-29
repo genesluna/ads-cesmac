@@ -1,7 +1,5 @@
 # Projeto integrador II-A do curso de ADS do CESMAC
 
-<br>
-
 ## Especificações do projeto:
 
 - Criar um aplicativo que simule depósitos e saques em uma conta bancária;
