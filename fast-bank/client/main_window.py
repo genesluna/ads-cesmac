@@ -5,7 +5,7 @@ from util import messages, formatters
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
-    def __init__(self, user) -> None:
+    def __init__(self, user: dict) -> None:
         super(MainWindow, self).__init__()
         self.setupUi(self)
         self.setWindowTitle('Banco Fast')

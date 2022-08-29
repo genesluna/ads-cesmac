@@ -1,8 +1,7 @@
 import requests
-import json
 
 
-def login(user_name, password):
+def login(user_name: str, password: str) -> bool:
     payload = {"user_name": user_name, "password": password}
     response = requests.post('http://127.0.0.1:5000/login', json=payload)
 
