@@ -8,4 +8,4 @@
 - Deve haver autenticação do usuário;
 - Deve haver menus com: saldo, depósito, saque e sair.
 
-<img src="/client/assets/images/login_screen.png" alt="Login screen"/>
+<img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/fast-bank/client/assets/images/login_screen.png" alt="Login screen"/>
