@@ -1,10 +1,7 @@
 from PySide2.QtWidgets import QMainWindow
 from UI.ui_main_window import Ui_MainWindow
 from services import users_service as us
-from util import messages
-import locale
-
-locale.setlocale(locale.LC_ALL, 'pt_BR')
+from util import messages, formatters
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -15,7 +12,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.user = user
         self.lbl_greeting.setText(f'Olá, {user["name"]}')
         self.lbl_acount_balance.setText(
-            str(locale.currency(self.user['balance'], grouping=True)))
+            formatters.format_currency(self.user['balance']))
 
         # Navigation events
         self.btn_home.clicked.connect(self.navigate_home)
@@ -26,33 +23,33 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_deposit_amount.clicked.connect(self.handle_deposit)
         self.btn_withdraw_amount.clicked.connect(self.handle_withdraw)
 
-    def navigate_home(self):
+    def navigate_home(self) -> None:
         self.refresh_user()
         self.lbl_acount_balance.setText(
-            self.format_currency(self.user['balance']))
+            formatters.format_currency(self.user['balance']))
         self.Pages.setCurrentWidget(self.page_home)
 
-    def navigate_deposit(self):
+    def navigate_deposit(self) -> None:
         self.refresh_user()
         self.lbl_acc_balance_deposit.setText(
-            self.format_currency(self.user['balance']))
+            formatters.format_currency(self.user['balance']))
         self.Pages.setCurrentWidget(self.page_deposit)
 
-    def navigate_withdraw(self):
+    def navigate_withdraw(self) -> None:
         self.refresh_user()
         self.lbl_acc_balance_withdraw.setText(
-            self.format_currency(self.user['balance']))
+            formatters.format_currency(self.user['balance']))
         self.Pages.setCurrentWidget(self.page_withdraw)
 
-    def handle_deposit(self):
+    def handle_deposit(self) -> None:
         amount = float(self.txt_deposit_amount.text())
         us.deposit(self.user['id'], amount)
         self.refresh_user()
         self.lbl_acc_balance_deposit.setText(
-            self.format_currency(self.user['balance']))
+            formatters.format_currency(self.user['balance']))
         self.txt_deposit_amount.setText('')
 
-    def handle_withdraw(self):
+    def handle_withdraw(self) -> None:
         amount = float(self.txt_withdraw_amount.text())
 
         if amount > self.user['balance']:
@@ -64,11 +61,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         us.withdraw(self.user['id'], amount)
         self.refresh_user()
         self.lbl_acc_balance_withdraw.setText(
-            self.format_currency(self.user['balance']))
+            formatters.format_currency(self.user['balance']))
         self.txt_withdraw_amount.setText('')
 
-    def refresh_user(self):
+    def refresh_user(self) -> None:
         self.user = us.get_user_by_id(str(self.user['id']))
-
-    def format_currency(self, value):
-        return str(locale.currency(value, grouping=True))
