@@ -1,6 +1,7 @@
-from PySide2.QtWidgets import QMainWindow, QMessageBox
+from PySide2.QtWidgets import QMainWindow
 from UI.ui_main_window import Ui_MainWindow
 from services import users_service as us
+from util import messages
 import locale
 
 locale.setlocale(locale.LC_ALL, 'pt_BR')
@@ -55,7 +56,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         amount = float(self.txt_withdraw_amount.text())
 
         if amount > self.user['balance']:
-            self.show_alert(
+            messages.show_alert(
                 'Saldo infuficiente', 'O valor que você deseja sacar é maior que o saldo disponível.')
             self.txt_withdraw_amount.setText('')
             return None
@@ -71,10 +72,3 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def format_currency(self, value):
         return str(locale.currency(value, grouping=True))
-
-    def show_alert(self, title, message):
-        alert = QMessageBox()
-        alert.setIcon(QMessageBox.Warning)
-        alert.setWindowTitle(title)
-        alert.setText(message)
-        alert.exec_()
