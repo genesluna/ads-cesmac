@@ -4,6 +4,6 @@ Nessa etapa fizemos o refatoramento do sistema com o uso de funções e classes 
 
 <br>
 <div>
-  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/comp-interest-calc/EA3/screenshot01.png" alt="Login screen"/>
-  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/comp-interest-calc/EA3/screenshot02.png" alt="Home screen"/>
+  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/comp-interest-calc/EA3/screenshot01.png" alt="app screenshot"/>
+  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/comp-interest-calc/EA3/screenshot02.png" alt="chart screenshot"/>
 </div>

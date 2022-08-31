@@ -4,5 +4,5 @@ Na primeira EA ficou decidido que o projeto seria uma calculadora de juros compo
 
 <br>
 <div>
-  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/comp-interest-calc/EA2/screenshot.png" alt="Login screen"/>
+  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/comp-interest-calc/EA2/screenshot.png" alt="screenshot"/>
 </div>
