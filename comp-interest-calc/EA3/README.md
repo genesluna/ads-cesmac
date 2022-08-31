@@ -4,6 +4,6 @@ Nessa etapa fizemos o refatoramento do sistema com o uso de funções e classes 
 
 <br>
 <div>
-  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/fast-bank/client/assets/images/login_screen.png" alt="Login screen"/>
-  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/fast-bank/client/assets/images/home_screen.png" alt="Home screen"/>
+  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/comp-interest-calc/EA3/screenshot01.png" alt="Login screen"/>
+  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/comp-interest-calc/EA3/screenshot02.png" alt="Home screen"/>
 </div>
