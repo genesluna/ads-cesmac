@@ -7,3 +7,9 @@ Será desenvolvido em 3 etapas:
 - Construção de fluxograma
 - Implementação de protótipo em liguagem Python
 - Inclusão de vetores e/ou matrizes, refatoração e separação dos módulos por função.
+
+<br>
+<div>
+  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/fast-bank/client/assets/images/login_screen.png" alt="Login screen"/>
+  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/fast-bank/client/assets/images/home_screen.png" alt="Home screen"/>
+</div>
