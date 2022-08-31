@@ -9,6 +9,5 @@
 
 <br>
 <div>
-  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/fast-bank/client/assets/images/login_screen.png" alt="Login screen"/>
-  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/fast-bank/client/assets/images/home_screen.png" alt="Home screen"/>
+  <img src="https://raw.githubusercontent.com/genesluna/ads-cesmac/main/bmi-calculator/screenshot.png" alt="screenshot"/>
 </div>
