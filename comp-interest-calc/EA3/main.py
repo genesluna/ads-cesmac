@@ -1,6 +1,6 @@
 # Compound interest calculator
-from ui.calc_ui import CalcUI
-from util.interest import Interest
+from src.ui.calc_ui import CalcUI
+from src.util.interest import Interest
 
 
 def main():

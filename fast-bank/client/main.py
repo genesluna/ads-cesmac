@@ -1,5 +1,5 @@
 from PySide2.QtWidgets import QApplication
-from login import Login
+from src.controllers.login import Login
 import sys
 
 
