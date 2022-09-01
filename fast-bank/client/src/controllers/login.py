@@ -1,7 +1,6 @@
 from PySide2.QtWidgets import (QWidget)
 from src.views.ui_login import Ui_Login
 from src.services import login_service as ls
-
 from src.controllers.main_window import MainWindow
 
 
