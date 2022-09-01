@@ -1,7 +1,7 @@
 import locale
 import matplotlib.pyplot as plt
-from investment_plan import InvestmentPlan
-from colors import Colors
+from models.investment_plan import InvestmentPlan
+from util.colors import Colors
 import os
 
 

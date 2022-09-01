@@ -1,4 +1,4 @@
-from investment_plan import InvestmentPlan
+from models.investment_plan import InvestmentPlan
 from datetime import datetime
 
 
