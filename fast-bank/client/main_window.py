@@ -13,6 +13,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.lbl_greeting.setText(f'Olá, {user["name"]}')
         self.lbl_acount_balance.setText(
             formatters.format_currency(self.user['balance']))
+        self.lbl_credit_balance.setText(
+            formatters.format_currency(self.user['balance_credit']))
+        self.lbl_investment_balance.setText(
+            formatters.format_currency(self.user['balance_investment']))
 
         # Navigation events
         self.btn_home.clicked.connect(self.navigate_home)
@@ -43,6 +47,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def handle_deposit(self) -> None:
         amount = float(self.txt_deposit_amount.text())
+
+        if amount <= 0:
+            messages.show_alert(
+                'Erro de validação', 'O valor tem que ser maior que zero.')
+            self.txt_withdraw_amount.setText('')
+            return None
+
         us.deposit(self.user['id'], amount)
         self.refresh_user()
         self.lbl_acc_balance_deposit.setText(
@@ -55,6 +66,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if amount > self.user['balance']:
             messages.show_alert(
                 'Saldo infuficiente', 'O valor que você deseja sacar é maior que o saldo disponível.')
+            self.txt_withdraw_amount.setText('')
+            return None
+        elif amount <= 0:
+            messages.show_alert(
+                'Erro de validação', 'O valor tem que ser maior que zero.')
             self.txt_withdraw_amount.setText('')
             return None
 

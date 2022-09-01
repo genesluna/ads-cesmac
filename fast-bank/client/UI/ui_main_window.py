@@ -36,7 +36,7 @@ class Ui_MainWindow(object):
         self.frm_header.setFrameShadow(QFrame.Raised)
         self.label = QLabel(self.frm_header)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(6, -8, 251, 91))
+        self.label.setGeometry(QRect(3, -8, 260, 91))
         self.label.setPixmap(QPixmap(u"./assets/images/logo.png"))
         self.label.setScaledContents(True)
         self.frm_body = QFrame(self.centralwidget)
@@ -101,11 +101,12 @@ class Ui_MainWindow(object):
         self.label_7.setGeometry(QRect(20, 15, 111, 16))
         self.label_7.setFont(font1)
         self.label_7.setStyleSheet(u"background-color: rgba(255, 255, 255,0);")
-        self.label_8 = QLabel(self.frame_2)
-        self.label_8.setObjectName(u"label_8")
-        self.label_8.setGeometry(QRect(20, 40, 160, 30))
-        self.label_8.setFont(font2)
-        self.label_8.setStyleSheet(u"background-color: rgba(255, 255, 255,0);")
+        self.lbl_credit_balance = QLabel(self.frame_2)
+        self.lbl_credit_balance.setObjectName(u"lbl_credit_balance")
+        self.lbl_credit_balance.setGeometry(QRect(20, 40, 160, 30))
+        self.lbl_credit_balance.setFont(font2)
+        self.lbl_credit_balance.setStyleSheet(
+            u"background-color: rgba(255, 255, 255,0);")
         self.frame_3 = QFrame(self.page_home)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setGeometry(QRect(20, 240, 242, 80))
@@ -118,11 +119,11 @@ class Ui_MainWindow(object):
         self.label_9.setGeometry(QRect(20, 15, 111, 16))
         self.label_9.setFont(font1)
         self.label_9.setStyleSheet(u"background-color: rgba(255, 255, 255,0);")
-        self.label_10 = QLabel(self.frame_3)
-        self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(20, 40, 160, 30))
-        self.label_10.setFont(font2)
-        self.label_10.setStyleSheet(
+        self.lbl_investment_balance = QLabel(self.frame_3)
+        self.lbl_investment_balance.setObjectName(u"lbl_investment_balance")
+        self.lbl_investment_balance.setGeometry(QRect(20, 40, 160, 30))
+        self.lbl_investment_balance.setFont(font2)
+        self.lbl_investment_balance.setStyleSheet(
             u"background-color: rgba(255, 255, 255,0);")
         self.Pages.addWidget(self.page_home)
         self.page_deposit = QWidget()
@@ -344,12 +345,12 @@ class Ui_MainWindow(object):
             QCoreApplication.translate("MainWindow", u"R$ 1.350,00", None))
         self.label_7.setText(QCoreApplication.translate(
             "MainWindow", u"Cart\u00e3o de cr\u00e9dito", None))
-        self.label_8.setText(QCoreApplication.translate(
-            "MainWindow", u"R$ 0,00", None))
+        self.lbl_credit_balance.setText(
+            QCoreApplication.translate("MainWindow", u"R$ 0,00", None))
         self.label_9.setText(QCoreApplication.translate(
             "MainWindow", u"Investimentos", None))
-        self.label_10.setText(QCoreApplication.translate(
-            "MainWindow", u"R$ 0,00", None))
+        self.lbl_investment_balance.setText(
+            QCoreApplication.translate("MainWindow", u"R$ 0,00", None))
         self.label_6.setText(QCoreApplication.translate(
             "MainWindow", u"Saldo dispon\u00edvel", None))
         self.lbl_acc_balance_deposit.setText(

@@ -1,0 +1,31 @@
+from flask import Flask, Blueprint
+from flask_restx import Api
+
+
+class Server():
+
+    def __init__(self) -> None:
+        self.app = Flask(__name__)
+        self.blueprint = Blueprint('api', __name__, url_prefix='/api')
+        self.api = Api(self.blueprint, doc='/doc',
+                       title='Banco Fast', version='0.1')
+        self.app.register_blueprint(self.blueprint)
+
+        self.app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../data/db.sqlite'
+        self.app.config['PROPAGATE_EXCEPTIONS'] = True
+        self.app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+        self.user_ns = self.user_ns()
+
+    def user_ns(self):
+        return self.api.namespace(name='Users', description='User related operations', path='/users')
+
+    def run(self):
+        self.app.run(
+            port=5000,
+            debug=True,
+            host='0.0.0.0'
+        )
+
+
+server = Server()
