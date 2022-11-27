@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OOPMapping.Entidades.EntidadeBase">
+    <Position X="5.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAE=</HashCode>
+      <FileName>Entidades\EntidadeBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPMapping.Entidades.Orgao">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Entidades\Orgao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPMapping.Entidades.Servidor">
+    <Position X="7.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAA=</HashCode>
+      <FileName>Entidades\Servidor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPMapping.Entidades.Holerite">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAABBAAAAQAAAAAAQAgAAACAIAAAIAA=</HashCode>
+      <FileName>Entidades\Holerite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPMapping.Entidades.HoleriteAtivo">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABIAAgIAAAAAAAAAAAAAAAAAAIBAAAAEAAAIAA=</HashCode>
+      <FileName>Entidades\HoleriteAtivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPMapping.Entidades.HoleriteInativo">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Entidades\HoleriteInativo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPMapping.Entidades.ServidorAtivo">
+    <Position X="7.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAIAAAAAAAAAABAAAAAAAAKAA=</HashCode>
+      <FileName>Entidades\ServidorAtivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPMapping.Entidades.ServidorInativo">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Entidades\ServidorInativo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
