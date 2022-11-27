@@ -6,3 +6,9 @@
 - Verificar as informações disponíveis em servidores ativos e inativos;
 - Fazer a modelagem dos dados baseado nas informações do portal;
 - Fazer o mapeamento usando programação orientada a objetos;
+
+<br/>
+
+Diagrama UML
+
+![diagrama uml](https://raw.githubusercontent.com/genesluna/ads-cesmac/main/oop-mapping/ClassDiagram.png)
