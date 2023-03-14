@@ -4,6 +4,6 @@ The proposed project is to develop a simple application that has the use of vari
 
 It will be developed in 3 stages:
 
-- Flowchart construction
-- Prototype implementation in Python language
-- Inclusion of vectors and/or matrices, refactoring and separation of modules by function.
+- Flowchart construction (EA1)
+- Prototype implementation in Python language (EA2)
+- Inclusion of vectors and/or matrices, refactoring and separation of modules by function. (EA3)
