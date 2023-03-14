@@ -1,6 +1,6 @@
-# Terceira etapa do projeto
+# Third stage of the project
 
-Nessa etapa fizemos o refatoramento do sistema com o uso de funções e classes e também incluímos o uso de vetores. Com o uso desse vetores, foi possível adicionar uma nova funcionalidade que plota um gráfico com a evolução do investimento ao logo dos anos.
+In this step we refactored the system using functions and classes and also included the use of vectors. With the use of these vectors, it was possible to add a new functionality that plots a graph with the evolution of the investment over the years.
 
 <br>
 <div>
