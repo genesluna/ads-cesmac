@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="genes"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-06-05 12:53:09 "/>
+        <attribute name="created" value="Z2VuZXM7REVTS1RPUC1IT01FOzIwMjItMDYtMDU7IjExOjMzOjE2ICI7MjU5Nw=="/>
+        <attribute name="edited" value="Z2VuZXM7REVTS1RPUC1IT01FOzIwMjItMDYtMDU7IjEyOjUzOjA5ICI7MjsyNzEx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="idade, altura, peso" type="Real" array="False" size=""/>
+            <declare name="imc, ida" type="Real" array="False" size=""/>
+            <declare name="msgImc" type="String" array="False" size=""/>
+            <input variable="idade"/>
+            <input variable="altura"/>
+            <input variable="peso"/>
+            <assign variable="imc" expression="peso / (altura^2)"/>
+            <if expression="idade &gt;= 1 &amp;&amp; idade &lt;= 17">
+                <then>
+                    <assign variable="ida" expression="peso * 40"/>
+                </then>
+                <else>
+                    <if expression="idade &gt; 17 &amp;&amp; idade &lt;= 55">
+                        <then>
+                            <assign variable="ida" expression="peso * 35"/>
+                        </then>
+                        <else>
+                            <if expression="idade &gt; 55 &amp;&amp; idade &lt;= 65">
+                                <then>
+                                    <assign variable="ida" expression="peso * 30"/>
+                                </then>
+                                <else>
+                                    <assign variable="ida" expression="peso * 25"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <if expression="imc &lt;= 18.5">
+                <then>
+                    <assign variable="msgImc" expression="&quot;Abaixo do peso ideal&quot;"/>
+                </then>
+                <else>
+                    <if expression="imc &gt; 18.5 &amp;&amp; imc &lt; 25">
+                        <then>
+                            <assign variable="msgImc" expression="&quot;Peso ideal&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="imc &gt;= 25 &amp;&amp; imc &lt; 30">
+                                <then>
+                                    <assign variable="msgImc" expression="&quot;Acima do peso ideal&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="imc &gt;= 30 &amp;&amp; imc &lt; 40">
+                                        <then>
+                                            <assign variable="msgImc" expression="&quot;Voc&#234; tem obesidade&quot;"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="msgImc" expression="&quot;Voc&#234; tem obesidade m&#243;rbida&quot;"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Voc&#234; deve beber &quot; &amp; ida &amp; &quot;ml de &#225;gua por dia.&quot;" newline="True"/>
+            <output expression="&quot;Seu IMC &#233;: &quot; &amp; ToFixed(imc,2)" newline="True"/>
+            <output expression="msgImc" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
