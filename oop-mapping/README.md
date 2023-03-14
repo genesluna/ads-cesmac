@@ -1,14 +1,14 @@
-# Projeto integrador II-B do curso de ADS do CESMAC
+# CESMAC ADS course II-B integrator project
 
-## Especificações do projeto:
+## Project specifications:
 
-- Entrar no portal da transparência do governo de Alagoas;
-- Verificar as informações disponíveis em servidores ativos e inativos;
-- Fazer a modelagem dos dados baseado nas informações do portal;
-- Fazer o mapeamento usando programação orientada a objetos;
+- Navigate to the transparency portal of the government of Alagoas;
+- Check the information available on active and inactive servers;
+- Make the data modeling based on the portal information;
+- Make the mapping using object-oriented programming;
 
 <br/>
 
-Diagrama UML
+UML diagram
 
 ![diagrama uml](https://raw.githubusercontent.com/genesluna/ads-cesmac/main/oop-mapping/ClassDiagram.png)
