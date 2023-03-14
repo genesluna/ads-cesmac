@@ -1,1 +1,1 @@
-# Projects and activities orelaated to CESMAC systems analysis and development course
+# Projects and activities related to CESMAC systems analysis and development course
