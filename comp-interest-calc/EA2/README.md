@@ -1,6 +1,6 @@
-# Segunda etapa do projeto
+# Second stage of the project
 
-Na primeira EA ficou decidido que o projeto seria uma calculadora de juros compostos. Nessa segunda etapa iremos implementar o fluxograma criado na primeira EA em linguagem de programação Python. Essa implementação será um rascunho, uma prova de conceito e não aplicará boas práticas de programação. Refatoração e boas práticas ficarão para o código final que será apresentado na terceira EA.
+In the first EA it was decided that the project would be a compound interest calculator. In this second step we will implement the flowchart created in the first EA in Python programming language. This implementation will be a draft, proof of concept, and will not apply good programming practices. Refactoring and best practices will remain for the final code that will be presented in the third EA.
 
 <br>
 <div>
