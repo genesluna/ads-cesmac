@@ -33,6 +33,7 @@ Once you make your selection, the script will save the data to the selected data
 The following packages are required to run the script:
 
 - simple_term_menu
+- halo
 - pandas
 - sqlalchemy
 - google-cloud-bigquery (if using Google BigQuery)
