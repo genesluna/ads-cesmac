@@ -1,9 +1,9 @@
-# Projeto referente à disciplina de Pensamento Computacional do curso de ADS do CESMAC
+# Project referring to the discipline of Computational Thinking of the ADS course at CESMAC
 
-O projeto proposto é para desenvolver um aplicativo simples que possua o uso de variáveis, estruturas condicionais e de repetição. O projeto deverá ter, no máximo, vinte passos.
+The proposed project is to develop a simple application that has the use of variables, conditional structures and repetition. The project should have a maximum of twenty steps.
 
-Será desenvolvido em 3 etapas:
+It will be developed in 3 stages:
 
-- Construção de fluxograma
-- Implementação de protótipo em liguagem Python
-- Inclusão de vetores e/ou matrizes, refatoração e separação dos módulos por função.
+- Flowchart construction
+- Prototype implementation in Python language
+- Inclusion of vectors and/or matrices, refactoring and separation of modules by function.
