@@ -2,6 +2,10 @@
 
 This script scrapes monster data from https://zezeniabrasil.com/monsters/ using the monsters_scraper module and saves it to a database using the database module. This project was created for the modeling and data development discipline of the systems analysis course at CESMAC.
 
+\
+<img src="src/assets/flow.gif" width="600">
+
+\
 A dashboard was also created to view and analyze monster data. It can be accessed at the following link: https://lookerstudio.google.com/reporting/9a950d69-9f05-4724-ac6a-1874d91cce8a/page/f1IID
 
 \
