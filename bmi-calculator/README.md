@@ -1,11 +1,11 @@
-# Calculadora de IMC e ingestão diária de água
+# BMI calculator and daily water intake
 
-## Especificações do projeto:
+## Project specifications:
 
-- Desenvolver uma calculadora de IMC e ingestão de água;
-- O usuário deverá entrar com sua idade, altura e peso;
-- Baseado na entrada, devemos calcular o IMC e a IDA;
-- O aplicativo poderá ser desenvolvido em qualquer linguagem.
+- Develop a BMI and water intake calculator;
+- The user must enter their age, height and weight;
+- Based on the entry, we should calculate BMI and ADI;
+- The application can be developed in any language.
 
 <br>
 <div>
