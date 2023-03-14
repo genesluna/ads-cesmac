@@ -1,12 +1,12 @@
-# Projeto integrador II-A do curso de ADS do CESMAC
+# II-A integrating project of CESMAC's ADS course
 
-## Especificações do projeto:
+## Project specs:
 
-- Criar um aplicativo que simule depósitos e saques em uma conta bancária;
-- Deve ser desenvolvido com uma aplicação cliente e uma servidor;
-- Ambas as aplicações devem ser desenvolvidas em Python;
-- Deve haver autenticação do usuário;
-- Deve haver menus com: saldo, depósito, saque e sair.
+- Create an application that simulates deposits and withdrawals from a bank account;
+- It must be developed with a client and a server application;
+- Both applications must be developed in Python;
+- There must be user authentication;
+- There should be menus with: balance, deposit, withdrawal and exit.
 
 <br>
 <div>
