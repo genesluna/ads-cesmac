@@ -1,4 +1,6 @@
-# BMI and daily water intake calculator
+# I-B integrating project of CESMAC's ADS course
+
+## BMI and daily water intake calculator
 
 ## Project specifications:
 
