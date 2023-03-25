@@ -1,6 +1,6 @@
 class BSTree:
     """
-    Binary Search Tree (BST) class with the following methods:
+    Binary Search Tree (BST) class with the following public methods:
     - insert: to insert a value in the tree
     - delete: to delete a value from the tree
     - search: to search for a value in the tree
