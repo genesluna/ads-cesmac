@@ -1,5 +1,10 @@
-from binary_search_tree.bs_tree import BSTree
-from avl_tree.avl_tree import AVLTree
+import sys
+
+sys.path.append("avl_tree")
+sys.path.append("bs_tree")
+
+from avl_tree import AVLTree
+from bs_tree import BSTree
 from os import system
 
 values = [10, 8, 9, 4, 2, 17, 15, 25, 3, 6, 19, 34, 1, 30, 5]
