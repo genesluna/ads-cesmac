@@ -64,3 +64,42 @@ class BSTree:
             return self.__search(node.left, value)
         else:
             return self.__search(node.right, value)
+
+    def traverse_in_order(self):
+        nodes = []
+
+        def __traverse_in_order(node):
+            if node is not None:
+                __traverse_in_order(node.left)
+                nodes.append(node.value)
+                __traverse_in_order(node.right)
+
+        __traverse_in_order(self.root)
+
+        return nodes
+
+    def traverse_pre_order(self):
+        nodes = []
+
+        def __traverse_pre_order(node):
+            if node is not None:
+                nodes.append(node.value)
+                __traverse_pre_order(node.left)
+                __traverse_pre_order(node.right)
+
+        __traverse_pre_order(self.root)
+
+        return nodes
+
+    def traverse_post_order(self):
+        nodes = []
+
+        def __traverse_post_order(node):
+            if node is not None:
+                __traverse_post_order(node.left)
+                __traverse_post_order(node.right)
+                nodes.append(node.value)
+
+        __traverse_post_order(self.root)
+
+        return nodes
