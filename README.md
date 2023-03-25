@@ -1,1 +1,3 @@
-# Projects and activities related to CESMAC systems analysis and development course
+# Projects and assignments related to the course of Systems Analysis and Development at CESMAC college
+
+These are academic tasks designed to help students develop skills and knowledge in the field of information technology. These projects and assignments may involve topics such as software development, database management, web programming, network administration, and system design. Through these tasks, students can apply concepts and theories learned in class to real-world scenarios, learn to work in a team environment, and gain practical experience using industry-standard tools and technologies. Additionally, these projects and assignments help prepare students for their future careers in the field of computer science and technology.
