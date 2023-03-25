@@ -39,7 +39,7 @@ print("pre-order:  ", avlt.traverse_pre_order())
 print("post-order: ", avlt.traverse_post_order())
 input("\nPress enter to continue")
 
-# delete a value from the Binary Search Tree and show before and after
+# delete values from the Binary Search Tree and show before and after
 system("clear")
 print("\nDeleting value 8, 25, 30 and 5 from BS Tree...")
 print("\nBinary Search Tree diagram before delition:\n")
@@ -52,7 +52,7 @@ bst.delete(5)
 bst.print_tree_diagram()
 input("\nPress enter to continue")
 
-# delete a value from the AVL Tree and show before and after
+# delete values from the AVL Tree and show before and after
 system("clear")
 print("\nDeleting value 8, 25, 19 and 4 from AVL Tree...")
 print("\nBinary Search Tree diagram before delition:\n")
