@@ -103,3 +103,52 @@ class BSTree:
         __traverse_post_order(self.root)
 
         return nodes
+
+    def print_tree_diagram(self):
+        def get_height(root):
+            return 1 + max(get_height(root.left), get_height(root.right)) if root else -1
+
+        num_levels = get_height(self.root)
+        width = pow(2, num_levels + 1)
+
+        queue = [(self.root, 0, width, "c")]
+        levels = []
+
+        while queue:
+            node, level, position, alignment = queue.pop(0)
+            if node:
+                if len(levels) <= level:
+                    levels.append([])
+
+                levels[level].append([node, level, position, alignment])
+                segment = width // (pow(2, level + 1))
+                queue.append((node.left, level + 1, position - segment, "l"))
+                queue.append((node.right, level + 1, position + segment, "r"))
+
+        for i, nodes in enumerate(levels):
+            previous_position = 0
+            previous_line_position = 0
+            line_str = ""
+            value_str = ""
+            segment = width // (pow(2, i + 1))
+            for node_info in nodes:
+                value = str(node_info[0].value)
+                position = node_info[2]
+                alignment = node_info[3]
+
+                if alignment == "r":
+                    line_str += (
+                        " " * (position - previous_line_position - 1 - segment - segment // 2)
+                        + "¯" * (segment + segment // 2)
+                        + "\\"
+                    )
+                    previous_line_position = position
+                elif alignment == "l":
+                    line_str += " " * (position - previous_line_position - 1) + "/" + "¯" * (segment + segment // 2)
+                    previous_line_position = position + segment + segment // 2
+
+                value_str += " " * (position - previous_position - len(value)) + value
+                previous_position = position
+
+            print(line_str)
+            print(value_str)
