@@ -210,7 +210,7 @@ class AVLTree:
             # if the node is None, its height is 0
             return 0
         else:
-            # otherwise, the height is 1 plus the maximum height of its left and right subtrees
+            # otherwise, returns the current node height
             return node.height
 
     def __get_balance_factor(self, node):
