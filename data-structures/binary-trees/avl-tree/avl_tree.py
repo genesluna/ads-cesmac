@@ -48,27 +48,43 @@ class AVLTree:
         Returns:
             The new root node of the AVL Tree (or subtree) after the value has been inserted.
         """
+
+        # If the current node is None, create a new node with the value and return it.
         if node is None:
             return self.Node(value)
+
+        # If the value to be inserted is less than the current node's value, go to the left subtree.
         elif value < node.value:
             node.left = self.__insert(node.left, value)
+
+        # If the value to be inserted is greater than or equal to the current node's value, go to the right subtree.
         else:
             node.right = self.__insert(node.right, value)
 
+        # Update the height of the current node.
         node.height = 1 + max(self.__get_height(node.left), self.__get_height(node.right))
 
+        # Check the balance factor of the current node to determine if it is balanced or unbalanced.
         balance_factor = self.__get_balance_factor(node)
 
+        # If the current node is left-heavy and the value to be inserted is less than the value of its left child,
+        # perform a right rotation to balance the tree.
         if balance_factor > 1 and value < node.left.value:
             return self.__rotate_right(node)
 
+        # If the current node is right-heavy and the value to be inserted is greater than the value of its right child,
+        # perform a left rotation to balance the tree.
         if balance_factor < -1 and value > node.right.value:
             return self.__rotate_left(node)
 
+        # If the current node is left-heavy and the value to be inserted is greater than the value of its left child,
+        # perform a left-right rotation to balance the tree.
         if balance_factor > 1 and value > node.left.value:
             node.left = self.__rotate_left(node.left)
             return self.__rotate_right(node)
 
+        # If the current node is right-heavy and the value to be inserted is less than the value of its right child,
+        # perform a right-left rotation to balance the tree.
         if balance_factor < -1 and value < node.right.value:
             node.right = self.__rotate_right(node.right)
             return self.__rotate_left(node)
@@ -95,42 +111,66 @@ class AVLTree:
         Returns:
             The new root node of the AVL Tree (or subtree) after the value has been deleted.
         """
+
+        # If the node is None, return None
         if node is None:
             return node
+
+        # If the value is less than the node's value, search in the left subtree
         elif value < node.value:
             node.left = self.__delete(node.left, value)
+
+        # If the value is greater than the node's value, search in the right subtree
         elif value > node.value:
             node.right = self.__delete(node.right, value)
+
+        # If the value matches the node's value
         else:
+            # If the node has no left child, replace the node with its right child
             if node.left is None:
                 temp = node.right
                 node = None
                 return temp
+
+            # If the node has no right child, replace the node with its left child
             elif node.right is None:
                 temp = node.left
                 node = None
                 return temp
-            temp = self.__get_min_value_node(node.right)
-            node.value = temp.value
-            node.right = self.__delete(node.right, temp.value)
 
-        if node is None:
-            return node
+            # If the node has both left and right children
+            else:
+                # Find the minimum value in the right subtree
+                temp = self.__get_min_value_node(node.right)
+                # Replace the node's value with the minimum value
+                node.value = temp.value
+                # Delete the minimum value node from the right subtree
+                node.right = self.__delete(node.right, temp.value)
 
+        # Update the height of the current node.
         node.height = 1 + max(self.__get_height(node.left), self.__get_height(node.right))
 
+        # Check the balance factor of the current node to determine if it is balanced or unbalanced.
         balance_factor = self.__get_balance_factor(node)
 
+        # If the current node is left-heavy and the left subtree's balance factor is greater than or equal to 0,
+        # perform a right rotation
         if balance_factor > 1 and self.__get_balance_factor(node.left) >= 0:
             return self.__rotate_right(node)
 
+        # If the current node is right-heavy and the right subtree's balance factor is less than or equal to 0,
+        # perform a left rotation
         if balance_factor < -1 and self.__get_balance_factor(node.right) <= 0:
             return self.__rotate_left(node)
 
+        # If the current node is left-heavy and the left subtree's balance factor is less than 0,
+        # perform a left-right rotation
         if balance_factor > 1 and self.__get_balance_factor(node.left) < 0:
             node.left = self.__rotate_left(node.left)
             return self.__rotate_right(node)
 
+        # If the current node is right-heavy and the right subtree's balance factor is greater than 0,
+        # perform a right-left rotation
         if balance_factor < -1 and self.__get_balance_factor(node.right) > 0:
             node.right = self.__rotate_right(node.right)
             return self.__rotate_left(node)
@@ -149,6 +189,7 @@ class AVLTree:
         """
         current = node
 
+        # Traverse the tree by going to the left child of each node until we reach the minimum value node.
         while current.left is not None:
             current = current.left
 
@@ -166,8 +207,10 @@ class AVLTree:
 
         """
         if node is None:
+            # if the node is None, its height is 0
             return 0
         else:
+            # otherwise, the height is 1 plus the maximum height of its left and right subtrees
             return node.height
 
     def __get_balance_factor(self, node):
@@ -182,8 +225,10 @@ class AVLTree:
             int: The balance factor of the node.
         """
         if node is None:
+            # if the node is None, its balance factor is 0
             return 0
         else:
+            # otherwise, the balance factor is the height of its left subtree minus the height of its right subtree
             return self.__get_height(node.left) - self.__get_height(node.right)
 
     def __rotate_right(self, node):
@@ -196,11 +241,14 @@ class AVLTree:
         Returns:
             Node: The new root of the subtree after the rotation.
         """
-        new_root = node.left
-        node.left = new_root.right
-        new_root.right = node
+        new_root = node.left  # Save the left child of the given node as the new root.
+        node.left = new_root.right  # Make the right child of the new root the left child of the original node.
+        new_root.right = node  # Make the original node the right child of the new root.
+
+        # Recalculate the height of the original node and the new root based on their new children.
         node.height = 1 + max(self.__get_height(node.left), self.__get_height(node.right))
         new_root.height = 1 + max(self.__get_height(new_root.left), self.__get_height(new_root.right))
+
         return new_root
 
     def __rotate_left(self, node):
@@ -213,11 +261,14 @@ class AVLTree:
         Returns:
             Node: The new root of the subtree after the rotation.
         """
-        new_root = node.right
-        node.right = new_root.left
-        new_root.left = node
+        new_root = node.right  # Save the right child of the given node as the new root.
+        node.right = new_root.left  # Make the left child of the new root the right child of the original node.
+        new_root.left = node  # Make the original node the left child of the new root.
+
+        # Recalculate the height of the original node and the new root based on their new children.
         node.height = 1 + max(self.__get_height(node.left), self.__get_height(node.right))
         new_root.height = 1 + max(self.__get_height(new_root.left), self.__get_height(new_root.right))
+
         return new_root
 
     def search(self, value):
@@ -243,11 +294,16 @@ class AVLTree:
         Returns:
             The node containing the given value if it exists in the tree, None otherwise.
         """
+
+        # If the current node is None or it contains the desired value, return it
         if node is None or node.value == value:
             return node
 
+        # If the desired value is less than the current node's value, recursively search the left subtree
         if value < node.value:
             return self.__search(node.left, value)
+
+        # Otherwise, recursively search the right subtree
         else:
             return self.__search(node.right, value)
 
@@ -261,11 +317,14 @@ class AVLTree:
         nodes = []
 
         def __traverse_in_order(node):
+            # If the current node is not None, traverse the left subtree,
+            # visit the current node, and then traverse the right subtree
             if node is not None:
                 __traverse_in_order(node.left)
                 nodes.append(node.value)
                 __traverse_in_order(node.right)
 
+        # Start the traversal at the root of the tree
         __traverse_in_order(self.root)
 
         return nodes
@@ -280,11 +339,14 @@ class AVLTree:
         nodes = []
 
         def __traverse_pre_order(node):
+            # If the current node is not None, visit the current node,
+            # traverse the left subtree, and then traverse the right subtree
             if node is not None:
                 nodes.append(node.value)
                 __traverse_pre_order(node.left)
                 __traverse_pre_order(node.right)
 
+        # Start the traversal at the root of the tree
         __traverse_pre_order(self.root)
 
         return nodes
@@ -299,11 +361,14 @@ class AVLTree:
         nodes = []
 
         def __traverse_post_order(node):
+            # If the current node is not None, traverse the left subtree,
+            # traverse the right subtree, and then visit the current node
             if node is not None:
                 __traverse_post_order(node.left)
                 __traverse_post_order(node.right)
                 nodes.append(node.value)
 
+        # Start the traversal at the root of the tree
         __traverse_post_order(self.root)
 
         return nodes
@@ -316,26 +381,32 @@ class AVLTree:
             None.
         """
 
+        # Helper function to find the height of the binary tree
         def get_height(root):
             return 1 + max(get_height(root.left), get_height(root.right)) if root else -1
 
+        # Calculate the total number of levels and width of the binary tree
         num_levels = get_height(self.root)
         width = pow(2, num_levels + 1)
 
+        # Initialize the queue with the root node, level, position and alignment
         queue = [(self.root, 0, width, "c")]
         levels = []
 
+        # Traverse the binary tree level by level and store the nodes in a list
         while queue:
             node, level, position, alignment = queue.pop(0)
             if node:
                 if len(levels) <= level:
                     levels.append([])
 
+                # Store the node, level, position, and alignment information in a list
                 levels[level].append([node, level, position, alignment])
                 segment = width // (pow(2, level + 1))
                 queue.append((node.left, level + 1, position - segment, "l"))
                 queue.append((node.right, level + 1, position + segment, "r"))
 
+        # Print the binary tree
         for i, nodes in enumerate(levels):
             previous_position = 0
             previous_line_position = 0
@@ -347,6 +418,7 @@ class AVLTree:
                 position = node_info[2]
                 alignment = node_info[3]
 
+                # Add the lines that connect the nodes
                 if alignment == "r":
                     line_str += (
                         " " * (position - previous_line_position - 1 - segment - segment // 2)
@@ -358,6 +430,7 @@ class AVLTree:
                     line_str += " " * (position - previous_line_position - 1) + "/" + "¯" * (segment + segment // 2)
                     previous_line_position = position + segment + segment // 2
 
+                # Add the node value to the value string
                 value_str += " " * (position - previous_position - len(value)) + value
                 previous_position = position
 
