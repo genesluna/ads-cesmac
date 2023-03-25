@@ -121,3 +121,15 @@ class AVLTree:
         node.height = 1 + max(self.__get_height(node.left), self.__get_height(node.right))
         new_root.height = 1 + max(self.__get_height(new_root.left), self.__get_height(new_root.right))
         return new_root
+
+    def search(self, value):
+        return self.__search(self.root, value)
+
+    def __search(self, node, value):
+        if node is None or node.value == value:
+            return node
+
+        if value < node.value:
+            return self.__search(node.left, value)
+        else:
+            return self.__search(node.right, value)
