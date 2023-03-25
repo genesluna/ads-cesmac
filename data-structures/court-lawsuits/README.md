@@ -1,0 +1,3 @@
+# Small projects for studying data structures
+
+Programming assignments designed to help students learn and practice implementing various data structures, such as arrays, linked lists, stacks, queues, trees, and graphs. These projects typically involve using a specific data structure, as well as implementing various operations that can be performed on that data structure, such as insertion, deletion, traversal, and searching. Through these projects, students can gain hands-on experience with data structures, learn how to choose the right data structure for a given problem, and develop their programming and problem-solving skills.
