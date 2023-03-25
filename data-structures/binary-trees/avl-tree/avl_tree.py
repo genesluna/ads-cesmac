@@ -1,5 +1,21 @@
 class AVLTree:
+    """
+    A self-balancing binary search tree called an AVL tree with the following public methods:
+    - insert: to insert a value in the tree
+    - delete: to delete a value from the tree
+    - search: to search for a value in the tree
+    - traverse_in_order: to traverse the tree in-order and return a list of values
+    - traverse_pre_order: to traverse the tree pre-order and return a list of values
+    - traverse_post_order: to traverse the tree post-order and return a list of values
+    - print_tree_diagram: to print a diagram of the tree to the console
+    """
+
     class Node:
+        """
+        A class representing a node in the AVL Tree, with a value, left and right child nodes and
+        the height of the node.
+        """
+
         def __init__(self, value):
             self.value = value
             self.left = None
@@ -7,12 +23,31 @@ class AVLTree:
             self.height = 1
 
     def __init__(self):
+        """
+        Create a new AVL Tree with null root.
+        """
         self.root = None
 
     def insert(self, value):
+        """
+        Insert a new value into the AVL Tree.
+
+        Args:
+            value: The value to be inserted.
+        """
         self.root = self.__insert(self.root, value)
 
     def __insert(self, node, value):
+        """
+        Recursive helper function for inserting a new value into the AVL Tree.
+
+        Args:
+            node: The root node of the AVL Tree (or a subtree).
+            value: The value to be inserted.
+
+        Returns:
+            The new root node of the AVL Tree (or subtree) after the value has been inserted.
+        """
         if node is None:
             return self.Node(value)
         elif value < node.value:
@@ -41,9 +76,25 @@ class AVLTree:
         return node
 
     def delete(self, value):
+        """
+        Delete a value from the AVL Tree.
+
+        Args:
+            value: The value to be deleted.
+        """
         self.root = self.__delete(self.root, value)
 
     def __delete(self, node, value):
+        """
+        Recursive helper function for deleting a value from the AVL Tree.
+
+        Args:
+            node: The root node of the AVL Tree (or a subtree).
+            value: The value to be deleted.
+
+        Returns:
+            The new root node of the AVL Tree (or subtree) after the value has been deleted.
+        """
         if node is None:
             return node
         elif value < node.value:
@@ -87,6 +138,15 @@ class AVLTree:
         return node
 
     def __get_min_value_node(self, node):
+        """
+        Recursive helper function to get the node with the minimum value in an AVL Tree.
+
+        Args:
+            node: The root node of the AVL Tree (or a subtree).
+
+        Returns:
+            The node with the minimum value in the AVL Tree (or subtree).
+        """
         current = node
 
         while current.left is not None:
@@ -95,18 +155,47 @@ class AVLTree:
         return current
 
     def __get_height(self, node):
+        """
+        Recursively calculate the height of a node in the AVL tree.
+
+        Args:
+            node: The node to calculate the height of.
+
+        Returns:
+            int: The height of the node. If the node is None, 0 is returned.
+
+        """
         if node is None:
             return 0
         else:
             return node.height
 
     def __get_balance_factor(self, node):
+        """
+        Returns the balance factor of the given node, which is defined as the difference in height between
+        the left and right subtrees of the node. If the node is None, the balance factor is 0.
+
+        Args:
+            node: The node whose balance factor should be calculated.
+
+        Returns:
+            int: The balance factor of the node.
+        """
         if node is None:
             return 0
         else:
             return self.__get_height(node.left) - self.__get_height(node.right)
 
     def __rotate_right(self, node):
+        """
+        Performs a right rotation on the given node and returns the new root of the subtree.
+
+        Args:
+            node: The node to rotate.
+
+        Returns:
+            Node: The new root of the subtree after the rotation.
+        """
         new_root = node.left
         node.left = new_root.right
         new_root.right = node
@@ -115,6 +204,15 @@ class AVLTree:
         return new_root
 
     def __rotate_left(self, node):
+        """
+        Performs a left rotation on the given node and returns the new root of the subtree.
+
+        Args:
+            node: The node to rotate.
+
+        Returns:
+            Node: The new root of the subtree after the rotation.
+        """
         new_root = node.right
         node.right = new_root.left
         new_root.left = node
@@ -123,9 +221,28 @@ class AVLTree:
         return new_root
 
     def search(self, value):
+        """
+        Search for a node with the given value in the AVL binary search tree.
+
+        Args:
+            value: The value to search for.
+
+        Returns:
+            The node containing the given value if it exists in the tree, None otherwise.
+        """
         return self.__search(self.root, value)
 
     def __search(self, node, value):
+        """
+        Recursively search for a node with the given value in the AVL binary search tree.
+
+        Args:
+            node: The current node being examined.
+            value: The value to search for.
+
+        Returns:
+            The node containing the given value if it exists in the tree, None otherwise.
+        """
         if node is None or node.value == value:
             return node
 
@@ -135,6 +252,12 @@ class AVLTree:
             return self.__search(node.right, value)
 
     def traverse_in_order(self):
+        """
+        Traverses the tree in-order (left, root, right).
+
+        Returns:
+        - A list of the tree nodes visited in-order (left, root, right).
+        """
         nodes = []
 
         def __traverse_in_order(node):
@@ -148,6 +271,12 @@ class AVLTree:
         return nodes
 
     def traverse_pre_order(self):
+        """
+        Traverses the tree in pre-order (root, left, right).
+
+        Returns:
+        - A list of the tree nodes visited pre-order (root, left, right).
+        """
         nodes = []
 
         def __traverse_pre_order(node):
@@ -161,6 +290,12 @@ class AVLTree:
         return nodes
 
     def traverse_post_order(self):
+        """
+        Traverses the tree in post-order (left, right, root).
+
+        Returns:
+        - A list of the tree nodes visited post-order (left, right, root).
+        """
         nodes = []
 
         def __traverse_post_order(node):
@@ -174,6 +309,13 @@ class AVLTree:
         return nodes
 
     def print_tree_diagram(self):
+        """
+        Prints a graphical representation of the binary search tree.
+
+        Returns:
+            None.
+        """
+
         def get_height(root):
             return 1 + max(get_height(root.left), get_height(root.right)) if root else -1
 
