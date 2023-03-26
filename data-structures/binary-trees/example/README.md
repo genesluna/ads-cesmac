@@ -20,4 +20,4 @@ And finally, it deletes values from the AVL tree and shows a before and after
 
 ![before and after picture afer values deletion"](assets/image05.png "before and after picture afer values deletion from AVL Tree")
 
-All the diagrams were created by the print_tree_diagram function contained in both trees classes
+All the diagrams were created by the print_tree_diagram function contained in both trees classes and all the images are from the terminal while executing the script.
