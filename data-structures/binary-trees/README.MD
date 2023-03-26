@@ -5,7 +5,7 @@ This assignment aims to enable the student to fully understand the abstraction o
 **Based on this information, the assignment consists of building a binary tree following the steps below:**
 
 - Step 1: Build the Base Structure of a Binary Tree in some programming language (A class containing the Node and another containing the structure of the Binary Tree).
-- Step 2: Implement the features of inserting data into the binary tree.
+- Step 2: Implement the feature of inserting data into the binary tree.
 - Step 3: Implement the feature of removing data from the binary tree.
 - Step 4: Implement at least one of the three processes of displaying the values ​​contained within the binary tree: In-Order, Pre-Order, and Post-Order.
 - Extra Step: Ensure that the tree remains balanced during the process of inserting and removing data.
