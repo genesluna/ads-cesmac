@@ -1,13 +1,15 @@
+from src.payment_manager import PaymentManager
 from simple_term_menu import TerminalMenu
-from src.models.menu import Menu
-from src.models.hall import Hall
+from src.models.payment import Payment
 from src.models.kitchen import Kitchen
 from src.models.order import Order
-from src.models.payment import Payment
-from src.payment_manager import PaymentManager
+from src.models.menu import Menu
+from src.models.hall import Hall
+from datetime import datetime
 from copy import deepcopy
-import random
 from os import system
+import pandas as pd
+import random
 
 
 class AppMenus:
@@ -54,7 +56,7 @@ class AppMenus:
                 case 2:
                     self.__kitchen_menu()
                 case 3:
-                    pass
+                    self.__reports_menu()
                 case 5:
                     main_menu_exit = True
 
@@ -332,3 +334,74 @@ class AppMenus:
                 or "Sem pedidos na fila" in order_menu_items[menu_entry_index]
             ):
                 order_items_menu_back = True
+
+    def __reports_menu(self):
+        # Create a list of menu items to be displayed in the TerminalMenu
+        menu_items = ["Relatório de Vendas".ljust(20), "Exportar para excell", "", "<- Voltar".ljust(20)]
+
+        # Create a new TerminalMenu with the menu items list and a title
+        reports_items_menu = TerminalMenu(menu_items, title="\nRelatórios:\n", skip_empty_entries=True)
+
+        # Set a variable to keep track of whether the user has chosen to go back
+        report_items_menu_back = False
+
+        while not report_items_menu_back:
+            # Display the reports menu and get the selected table index
+            menu_entry_index = reports_items_menu.show()
+
+            # Choose the action based on the selected option
+            match menu_entry_index:
+                case 0:
+                    self.__sales_menu()
+                case 1:
+                    self.__print_report()
+                case 3:
+                    report_items_menu_back = True
+
+    def __sales_menu(self):
+        # Get all payments from the payment manager
+        all_payments = self.payment_manager.get_all_payments()
+
+        menu_items = []
+        # Loop through each payment in the payment manager to create the formatted menu items
+        for payment in all_payments:
+            menu_items.append(
+                f"Data: {payment['Data']} - Mesa: {payment['Mesa']} - Forma de pagamento: {payment['Forma de pagamento']} - Valor: {payment['Valor']}".ljust(
+                    98
+                )
+            )
+
+        # If there are no items in the list, add a "no items" message
+        if len(all_payments) < 1:
+            menu_items.append("Sem vendas no momento")
+
+        # Add a "back" option to the menu items list
+        menu_items.extend(["", "<- Voltar"])
+
+        # Create a new TerminalMenu with the menu items list and a title
+        sales_items_menu = TerminalMenu(menu_items, title="\nRelatório de vendas:\n", skip_empty_entries=True)
+
+        # Set a variable to keep track of whether the user has chosen to go back
+        sales_items_menu_back = False
+
+        # Loop through the menu until the user selects the "Voltar" option or the "Sem pedidos na fila" message is displayed
+        while not sales_items_menu_back:
+            # Display the reports menu and get the selected table index
+            menu_entry_index = sales_items_menu.show()
+
+            # If the user selects the "Voltar" option or the "Sem vendas no momento" message is displayed, exit the loop
+            if "<- Voltar" in menu_items[menu_entry_index] or "Sem vendas no momento" in menu_items[menu_entry_index]:
+                sales_items_menu_back = True
+
+    def __print_report(self):
+        # Gets All payments
+        all_payments = self.payment_manager.get_all_payments()
+        # Creates a pandas dataframe with all the payments
+        df = pd.DataFrame(all_payments)
+        # Saves the dataframe in xlsx format
+        df.to_excel(f"src/reports/relatótio_de_vendas_{datetime.now().strftime('%m-%d-%Y')}.xlsx", index=False)
+        # Print a message indicating that the report has been generated
+        print("\033[32;5m \nRelátório gerado. Está salvo na pasta 'reports'.\033[0m")
+        # wait for the user to press enter
+        input("\nPressione enter para voltar")
+        system("clear")
