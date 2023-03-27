@@ -3,13 +3,13 @@ from typing import List
 
 
 class PaymentManager:
-    def __init__(self):
+    def __init__(self) -> None:
         self.payment_stack: List[Payment] = []
 
     def process_payment(self, payment: Payment):
         self.payment_stack.append(payment)
 
-    def get_last_payment(self):
+    def get_last_payment(self) -> None:
         if len(self.payment_stack) > 0:
             return self.payment_stack[-1]
         else:
