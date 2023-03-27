@@ -10,6 +10,8 @@
 
 My idea was to create a system that uses the 3 data structures of this assignment (list, queue and stack). So I came up with a very simple system for a restaurant. Where orders are placed on a list and then passed to the kitchen in the form of a queue. When the meal is finished and payment is made, it is stored in a stack structure.
 
+<br>
+
 Here's a demo:
 
 !["Application flow"](src/assets/app_flow.gif "Application flow")
