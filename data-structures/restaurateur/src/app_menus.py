@@ -2,6 +2,7 @@ from src.payment_manager import PaymentManager
 from simple_term_menu import TerminalMenu
 from src.models.payment import Payment
 from src.models.kitchen import Kitchen
+from src.models.table import Table
 from src.models.order import Order
 from src.models.menu import Menu
 from src.models.hall import Hall
@@ -29,7 +30,7 @@ class AppMenus:
         self.payment_manager = PaymentManager()
         system("clear")
 
-    def main_menu(self):
+    def main_menu(self) -> None:
         # Define options for the main menu
         options = [
             "Adicionar pedido",
@@ -60,7 +61,7 @@ class AppMenus:
                 case 5:
                     main_menu_exit = True
 
-    def __order_menu(self):
+    def __order_menu(self) -> None:
         # Get the names of all tables and add the "back" option
         all_tables = self.hall.get_tables_names()
         all_tables.extend(["", "<- Voltar".center(11)])
@@ -108,7 +109,7 @@ class AppMenus:
                         for i in range(0, qtd):
                             order.add_menu_item(self.menu.menu_items[menu_entry_index])
 
-    def __active_tables_menu(self):
+    def __active_tables_menu(self) -> None:
         # Get a list of all active tables and create a list with their names
         active_tables = self.hall.get_active_tables()
         table_names = []
@@ -162,7 +163,7 @@ class AppMenus:
                                 active_table_dedails_menu_back = True
                                 active_tables_menu_back = True
 
-    def __process_payment(self, selectded_table):
+    def __process_payment(self, selectded_table: Table) -> None:
         # Print a message indicating that the payment is being processed
         print("\033[32;5m \nPagamento processado. Mesa liberada.\033[0m")
 
@@ -183,7 +184,7 @@ class AppMenus:
         input("\nPressione enter para voltar")
         system("clear")
 
-    def __active_table_items_menu(self, selected_table):
+    def __active_table_items_menu(self, selected_table: Table) -> None:
         # Create a list of ordered items for the selected table, displaying their name and status
         ordered_items = []
         for order in selected_table.orders:
@@ -203,7 +204,7 @@ class AppMenus:
             if "<- Voltar" in ordered_items[menu_entry_index]:
                 ordered_items_menu_back = True
 
-    def __kitchen_menu(self):
+    def __kitchen_menu(self) -> None:
         # Create a list of menu items to be displayed in the TerminalMenu
         menu_items = ["Fila de pedidos".ljust(15), "Fila de items".ljust(15), "", "<- Voltar".ljust(15)]
         # Create a new TerminalMenu with the menu items
@@ -228,7 +229,7 @@ class AppMenus:
                 case 3:
                     kitchen_menu_back = True
 
-    def __order_queue_menu(self):
+    def __order_queue_menu(self) -> None:
         # Get the kitchen queue
         kitchen_queue = self.kitchen.get_queue()
         # Create a list of menu items
@@ -293,7 +294,7 @@ class AppMenus:
                         order_status_menu_back = True
                         kitchen_queue_menu_back = True
 
-    def __order_items_menu(self):
+    def __order_items_menu(self) -> None:
         # Get all orders from the kitchen queue
         kitchen_queue = self.kitchen.get_queue()
         # Create an empty list to store menu items
@@ -335,7 +336,7 @@ class AppMenus:
             ):
                 order_items_menu_back = True
 
-    def __reports_menu(self):
+    def __reports_menu(self) -> None:
         # Create a list of menu items to be displayed in the TerminalMenu
         menu_items = ["Relatório de Vendas".ljust(20), "Exportar para excell", "", "<- Voltar".ljust(20)]
 
@@ -358,7 +359,7 @@ class AppMenus:
                 case 3:
                     report_items_menu_back = True
 
-    def __sales_menu(self):
+    def __sales_menu(self) -> None:
         # Get all payments from the payment manager
         all_payments = self.payment_manager.get_all_payments()
 
@@ -393,7 +394,7 @@ class AppMenus:
             if "<- Voltar" in menu_items[menu_entry_index] or "Sem vendas no momento" in menu_items[menu_entry_index]:
                 sales_items_menu_back = True
 
-    def __print_report(self):
+    def __print_report(self) -> None:
         # Gets All payments
         all_payments = self.payment_manager.get_all_payments()
         # Creates a pandas dataframe with all the payments
