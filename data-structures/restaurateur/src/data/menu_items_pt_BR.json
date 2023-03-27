@@ -1,0 +1,74 @@
+{
+  "menu_items": [
+    {
+      "item_id": 1,
+      "name": "Salada de Frango",
+      "description": "Alface, tomate, frango grelhado, croutons, milho e molho de mostarda e mel",
+      "price": 15.99,
+      "category": "Saladas"
+    },
+    {
+      "item_id": 2,
+      "name": "Pizza de Calabresa",
+      "description": "Mussarela, calabresa, cebola, pimentão e orégano em uma massa fina",
+      "price": 29.99,
+      "category": "Pizzas"
+    },
+    {
+      "item_id": 3,
+      "name": "Feijoada Completa",
+      "description": "Feijão preto, carne seca, linguiça, bacon, arroz, couve, farofa e laranja",
+      "price": 35.99,
+      "category": "Pratos Principais"
+    },
+    {
+      "item_id": 4,
+      "name": "Strogonoff de Frango",
+      "description": "Frango em cubos, creme de leite, champignon, molho de tomate e arroz branco",
+      "price": 27.99,
+      "category": "Pratos Principais"
+    },
+    {
+      "item_id": 5,
+      "name": "Bobó de Camarão",
+      "description": "Camarões refogados em um creme de mandioca com leite de coco, arroz e farofa",
+      "price": 42.99,
+      "category": "Pratos Principais"
+    },
+    {
+      "item_id": 6,
+      "name": "Pastel de Queijo",
+      "description": "Pastel de massa fina recheado com queijo derretido",
+      "price": 5.99,
+      "category": "Petiscos"
+    },
+    {
+      "item_id": 7,
+      "name": "Coxinha de Frango",
+      "description": "Coxinha de massa de batata recheada com frango desfiado",
+      "price": 4.99,
+      "category": "Petiscos"
+    },
+    {
+      "item_id": 8,
+      "name": "Moqueca de Peixe",
+      "description": "Peixe cozido em um molho de tomate, cebola, pimentão e leite de coco, acompanhado de arroz branco",
+      "price": 39.99,
+      "category": "Pratos Principais"
+    },
+    {
+      "item_id": 9,
+      "name": "Churrasco",
+      "description": "Picanha, linguiça, frango, arroz, feijão, farofa e vinagrete",
+      "price": 49.99,
+      "category": "Pratos Principais"
+    },
+    {
+      "item_id": 10,
+      "name": "Açaí na Tigela",
+      "description": "Açaí batido com banana e servido com granola e frutas",
+      "price": 14.99,
+      "category": "Sobremesas"
+    }
+  ]
+}

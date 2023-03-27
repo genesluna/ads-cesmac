@@ -1,0 +1,74 @@
+{
+  "menu_items": [
+    {
+      "item_id": 1,
+      "name": "Caesar Salad",
+      "description": "Romaine lettuce, Parmesan cheese, croutons, and Caesar dressing",
+      "price": 8.99,
+      "category": "Salads"
+    },
+    {
+      "item_id": 2,
+      "name": "Margherita Pizza",
+      "description": "Fresh mozzarella, tomato sauce, and basil on a thin crust",
+      "price": 12.99,
+      "category": "Pizzas"
+    },
+    {
+      "item_id": 3,
+      "name": "Pesto Pasta",
+      "description": "Penne pasta with homemade pesto sauce and Parmesan cheese",
+      "price": 11.99,
+      "category": "Pastas"
+    },
+    {
+      "item_id": 4,
+      "name": "Chicken Alfredo",
+      "description": "Fettuccine pasta with creamy Alfredo sauce and grilled chicken",
+      "price": 13.99,
+      "category": "Pastas"
+    },
+    {
+      "item_id": 5,
+      "name": "Beef Stir Fry",
+      "description": "Beef, broccoli, carrots, and bell peppers stir-fried in a savory sauce",
+      "price": 15.99,
+      "category": "Entrees"
+    },
+    {
+      "item_id": 6,
+      "name": "Lobster Roll",
+      "description": "Maine lobster meat tossed in a light dressing, served in a warm, buttered bun",
+      "price": 19.99,
+      "category": "Sandwiches"
+    },
+    {
+      "item_id": 7,
+      "name": "Grilled Salmon",
+      "description": "Grilled salmon fillet served with roasted vegetables and lemon butter sauce",
+      "price": 17.99,
+      "category": "Entrees"
+    },
+    {
+      "item_id": 8,
+      "name": "Mushroom Risotto",
+      "description": "Creamy Arborio rice with sautéed mushrooms, Parmesan cheese, and white wine",
+      "price": 14.99,
+      "category": "Entrees"
+    },
+    {
+      "item_id": 9,
+      "name": "BBQ Ribs",
+      "description": "Slow-cooked pork ribs slathered in tangy BBQ sauce",
+      "price": 16.99,
+      "category": "Entrees"
+    },
+    {
+      "item_id": 10,
+      "name": "Veggie Burger",
+      "description": "House-made veggie patty topped with avocado, tomato, and sprouts on a brioche bun",
+      "price": 11.99,
+      "category": "Sandwiches"
+    }
+  ]
+}

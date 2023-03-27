@@ -1,0 +1,44 @@
+{
+  "tables": [
+    {
+      "name": "Mesa 01",
+      "number": 1,
+      "capacity": 4
+    },
+    {
+      "name": "Mesa 02",
+      "number": 2,
+      "capacity": 4
+    },
+    {
+      "name": "Mesa 03",
+      "number": 3,
+      "capacity": 4
+    },
+    {
+      "name": "Mesa 04",
+      "number": 4,
+      "capacity": 4
+    },
+    {
+      "name": "Mesa 05",
+      "number": 5,
+      "capacity": 4
+    },
+    {
+      "name": "Mesa 06",
+      "number": 6,
+      "capacity": 4
+    },
+    {
+      "name": "Mesa 07",
+      "number": 7,
+      "capacity": 4
+    },
+    {
+      "name": "Mesa 08",
+      "number": 8,
+      "capacity": 4
+    }
+  ]
+}
