@@ -21,7 +21,7 @@ class Kitchen:
         if len(self.order_queue) > 0:
             order_index = self.order_queue.index(order)
             order = self.order_queue.pop(order_index)
-            order.set_status("Ready")
+            order.set_status("Finalizado")
             return order
         else:
             return None
