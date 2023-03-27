@@ -2,9 +2,9 @@
 
 ## Goals:
 
-Step 1: Choose a data structure and justify why it is the most suitable for solving the problem you chose;  
-Step 2: Implement the chosen data structure, that is, create a new class with the methods according to the chosen structure. It can be in any programming language;  
-Step 3: Use the integrated data structure to solve a problem;
+- Step 1: Choose a data structure and justify why it is the most suitable for solving the problem you chose;
+- Step 2: Implement the chosen data structure, that is, create a new class with the methods according to the chosen structure. It can be in any programming language;
+- Step 3: Use the integrated data structure to solve a problem;
 
 <br>
 
