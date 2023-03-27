@@ -21,7 +21,8 @@ class PaymentManager:
             payments.append(
                 {
                     "Data": payment.payment_time.strftime("%m/%d/%Y %H:%M:%S"),
-                    "Método de pagamento": payment.payment_method,
+                    "Mesa": payment.table.name,
+                    "Forma de pagamento": payment.payment_method,
                     "Valor": round(payment.amount_due, 2),
                 }
             )
