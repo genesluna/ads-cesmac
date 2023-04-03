@@ -42,7 +42,7 @@ class Util:
             elif guess > case_number:
                 high = mid - 1
 
-            # means x is present at mid
+            # means guess is present at mid
             else:
                 return lst[mid]
 
