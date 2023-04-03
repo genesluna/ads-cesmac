@@ -35,7 +35,7 @@ def main():
         end = time.perf_counter()
         elapsed_time = end - start
         print("\n|----------------------------------------------------------|")
-        print(f"| List search, no optimization        | Tempo: {elapsed_time:8f}s   |")
+        print(f"| List search, no optimization        | Time: {elapsed_time:8f}s    |")
         print("|----------------------------------------------------------|")
 
         # Quick sort and binary search for the case number in the list
@@ -46,7 +46,7 @@ def main():
         util.binary_search(lawsuits_list_copy, case_number)
         end = time.perf_counter()
         elapsed_time = end - start
-        print(f"| Quick sort and binary search        | Tempo: {elapsed_time:8f}s   |")
+        print(f"| Quick sort and binary search        | Time: {elapsed_time:8f}s    |")
         print("|----------------------------------------------------------|")
 
         # Performing a binary search for the second time now that
@@ -55,7 +55,7 @@ def main():
         util.binary_search(lawsuits_list_copy, case_number)
         end = time.perf_counter()
         elapsed_time = end - start
-        print(f"| Binary search second pass           | Tempo: {elapsed_time:8f}s   |")
+        print(f"| Binary search second pass           | Time: {elapsed_time:8f}s    |")
         print("|----------------------------------------------------------|")
 
         # Search for the case number in the hash table
@@ -64,7 +64,7 @@ def main():
         util.get_lawsuit_in_hash(case_number, lawsuits_hash)
         end = time.perf_counter()
         elapsed_time = end - start
-        print(f"| Search in hash table                | Tempo: {elapsed_time:8f}s   |")
+        print(f"| Search in hash table                | Time: {elapsed_time:8f}s    |")
         print("|----------------------------------------------------------|\n")
 
 
