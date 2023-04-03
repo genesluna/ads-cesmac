@@ -31,17 +31,22 @@ In our specific problem, where each process has a unique identification number, 
 
 <br/>
 
-Creating the lawsuits in memory  
+Creating the lawsuits in memory
+
 ![Creating lawsuits](src/assets/img_01.png "Creating lawsuits")
 
 Results using an item located in the first quarter of the list
+
 ![Results using an item located in the first quarter of the list](src/assets/img_02.png "Results using an item located in the first quarter of the list")
 
 Results using an item located in the second quarter of the list
+
 ![Results using an item located in the second quarter of the list](src/assets/img_03.png "Results using an item located in the second quarter of the list")
 
 Results using an item located in the third quarter of the list
+
 ![Results using an item located in the third quarter of the list](src/assets/img_04.png "Results using an item located in the third quarter of the list")
 
 Results using an item located in the last quarter of the list
+
 ![Results using an item located in the last quarter of the list](src/assets/img_05.png "Results using an item located in the last quarter of the list")
