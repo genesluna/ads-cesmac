@@ -31,7 +31,7 @@ In our specific problem, where each process has a unique identification number, 
 
 <br/>
 
-Creating the lawsuits in memory
+Creating the lawsuits in memory  
 ![Creating lawsuits](src/assets/img_01.png "Creating lawsuits")
 
 Results using an item located in the first quarter of the list
