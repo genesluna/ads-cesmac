@@ -28,3 +28,20 @@ The results showed that, obviously, the worst solution is the sequential search.
 In the case of binary search, when we take into account the time spent on sorting, it performs worse than sequential search. But once the data is sorted, the performance is much better.
 
 In our specific problem, where each process has a unique identification number, the hash table won out. Although it has limitations in non-equality searches, its performance would justify its use for the presented problem.
+
+<br/>
+
+Creating the lawsuits in memory
+![Creating lawsuits](src/assets/img_01.png "Creating lawsuits")
+
+Results using an item located in the first quarter of the list
+![Results using an item located in the first quarter of the list](src/assets/img_02.png "Results using an item located in the first quarter of the list")
+
+Results using an item located in the second quarter of the list
+![Results using an item located in the second quarter of the list](src/assets/img_03.png "Results using an item located in the second quarter of the list")
+
+Results using an item located in the third quarter of the list
+![Results using an item located in the third quarter of the list](src/assets/img_04.png "Results using an item located in the third quarter of the list")
+
+Results using an item located in the last quarter of the list
+![Results using an item located in the last quarter of the list](src/assets/img_05.png "Results using an item located in the last quarter of the list")
