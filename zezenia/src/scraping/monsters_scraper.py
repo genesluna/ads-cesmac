@@ -6,6 +6,7 @@ It uses the requests library to send HTTP requests to the website, and the Beaut
 import requests
 import pandas as pd
 import uuid
+import os
 from tqdm import tqdm
 from bs4 import BeautifulSoup
 
@@ -111,7 +112,7 @@ def scrape_monsters() -> pd.DataFrame:
     Scrapes the monsters pages to get the mosters list
     :retutn: a dataframe containig the monsters list with details
     """
-
+    os.system("clear")
     monsters_soup = get_monsters_page()
 
     # Locate the element with tag 'tr' and create a monsters list
