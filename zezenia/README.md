@@ -1,4 +1,4 @@
-# Monster Scraper
+# Zezenia Monsters Scraper
 
 This script scrapes monster data from https://zezeniabrasil.com/monsters/ using the monsters_scraper module and saves it to a database using the database module. This project was created for the modeling and data development discipline of the systems analysis course at CESMAC.
 
@@ -51,4 +51,4 @@ pip install -r requirements.txt
 
 ## License
 
-Billie is licensed under the MIT license. See `LICENSE` for more information.
+Zezenia Monsters Scraper is licensed under the MIT license. See `LICENSE` for more information.
