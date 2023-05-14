@@ -1,4 +1,4 @@
-# **Monster Scraper**
+# Monster Scraper
 
 This script scrapes monster data from https://zezeniabrasil.com/monsters/ using the monsters_scraper module and saves it to a database using the database module. This project was created for the modeling and data development discipline of the systems analysis course at CESMAC.
 
@@ -11,7 +11,7 @@ A dashboard was also created to view and analyze monster data. It can be accesse
 \
 <img src="src/assets/dashboard.png" width="600">
 
-## **Usage**
+## Usage
 
 \
 To run the script, simply execute the following command in your terminal:
@@ -31,7 +31,7 @@ You will be presented with a menu asking you to select the database you would li
 \
 Once you make your selection, the script will save the data to the selected database(s).
 
-## **Requirements**
+## Requirements
 
 \
 The following packages are required to run the script:
@@ -49,5 +49,6 @@ You can install these packages by running the following command:
 pip install -r requirements.txt
 ```
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
+
+Billie is licensed under the MIT license. See `LICENSE` for more information.
