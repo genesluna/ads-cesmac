@@ -1,4 +1,4 @@
-**Passo 1**
+## Passo 1
 
 **Objetivos:**
 
@@ -83,7 +83,191 @@ gantt
     Revisão final antes do lançamento: milestone, rev5, 29-04-2024, 1d
 ```
 
-**Passo 4**
+## Passo 2
+
+Baseado na matriz de prioridades, podemos identificar as seguintes prioridades essenciais para o projeto:
+
+1. Cadastro e Autenticação
+2. Banco de Dados de Animais
+3. Segurança de Dados
+4. Mecanismo de Busca
+5. Performance
+6. Responsividade
+
+Justificativa para cada prioridade essencial:
+
+1. Cadastro e Autenticação:
+   É fundamental para o funcionamento básico da plataforma. Sem um sistema robusto de cadastro e autenticação, não é possível garantir a segurança dos usuários nem gerenciar as informações de adotantes e abrigos.
+
+2. Banco de Dados de Animais:
+   O core da aplicação. Sem um banco de dados bem estruturado e completo dos animais disponíveis para adoção, a plataforma perde seu propósito principal.
+
+3. Segurança de Dados:
+   Crítico para a confiabilidade e conformidade legal da plataforma. Proteger as informações dos usuários e dos animais é essencial para o sucesso e longevidade do projeto.
+
+4. Mecanismo de Busca:
+   Elemento-chave para a usabilidade da plataforma. Um bom mecanismo de busca e filtragem permite que os potenciais adotantes encontrem facilmente os animais que melhor se adequam às suas preferências e condições.
+
+5. Performance:
+   Importante para garantir uma boa experiência do usuário. Uma plataforma rápida e responsiva incentiva o uso contínuo e reduz a taxa de abandono.
+
+6. Responsividade:
+   Essencial para garantir que a aplicação seja acessível em diferentes dispositivos, aumentando o alcance e a usabilidade da plataforma.
+
+Estas prioridades formam a base essencial do projeto. Elas garantem que a plataforma seja funcional, segura, eficiente e acessível. As outras funcionalidades, embora importantes, podem ser desenvolvidas em fases posteriores sem comprometer a essência do projeto.
+
+Elementos como o sistema de mensagens, a seção educativa e a integração com redes sociais, embora valiosos, têm menor prioridade inicial e podem ser implementados em fases subsequentes do desenvolvimento, após as funcionalidades core estarem estabelecidas e funcionando adequadamente.
+
+## Passo 3
+
+Para avaliar qual projeto é mais vantajoso, podemos usar dois critérios principais: Payback e Valor Presente Líquido (VPL). Vou calcular ambos para os projetos e depois compará-los.
+
+### Dados dos Projetos
+
+#### Projeto 1: Plataforma de Adoção de Animais
+
+- **Investimento Inicial:** R$ 800.000
+- **Entradas de Caixa Anuais:** R$ 220.000
+- **Duração:** 5 anos
+
+#### Projeto 2: Aplicação para Academias
+
+- **Investimento Inicial:** R$ 500.000
+- **Entradas de Caixa Anuais:** R$ 110.000
+- **Duração:** 5 anos
+
+### 1. **Payback**
+
+O Payback é o tempo necessário para recuperar o investimento inicial com os fluxos de caixa positivos.
+
+#### Cálculo do Payback:
+
+- **Projeto 1:**
+
+  - Investimento Inicial: R$ 800.000
+  - Entradas de Caixa Anuais: R$ 220.000
+  - Payback = Investimento Inicial / Entradas de Caixa Anuais
+  - Payback = 800.000 / 220.000 ≈ 3,64 anos
+
+- **Projeto 2:**
+  - Investimento Inicial: R$ 500.000
+  - Entradas de Caixa Anuais: R$ 110.000
+  - Payback = Investimento Inicial / Entradas de Caixa Anuais
+  - Payback = 500.000 / 110.000 ≈ 4,55 anos
+
+**Interpretação:** O Projeto 1 tem um Payback mais rápido (3,64 anos) comparado ao Projeto 2 (4,55 anos). Isso significa que o Projeto 1 recupera o investimento inicial mais rapidamente.
+
+### 2. **Valor Presente Líquido (VPL)**
+
+O VPL considera o valor do dinheiro no tempo, descontando os fluxos de caixa futuros a uma taxa de desconto (taxa mínima de atratividade ou custo de capital).
+
+#### Cálculo do VPL:
+
+Assumiremos uma taxa de desconto de 10% ao ano para os cálculos.
+
+$$
+\text{VPL} = \sum \frac{F_t}{(1 + r)^t} - I_0
+$$
+
+#### Cálculo do VPL do Projeto 1
+
+<br>
+
+$$
+\text{VPL} = \frac{220.000}{(1 + 0,10)^1} + \frac{220.000}{(1 + 0,10)^2} + \frac{220.000}{(1 + 0,10)^3} + \frac{220.000}{(1 + 0,10)^4} + \frac{220.000}{(1 + 0,10)^5} - 800.000
+$$
+
+Calculando cada termo:
+
+$$
+\frac{220.000}{(1 + 0,10)^1} = 199.090
+$$
+
+$$
+\frac{220.000}{(1 + 0,10)^2} = 180.081
+$$
+
+$$
+\frac{220.000}{(1 + 0,10)^3} = 163.710
+$$
+
+$$
+\frac{220.000}{(1 + 0,10)^4} = 148.818
+$$
+
+$$
+\frac{220.000}{(1 + 0,10)^5} = 135.290
+$$
+
+Somando os termos:
+
+$$
+199.090 + 180.081 + 163.710 + 148.818 + 135.290 = 826.989
+$$
+
+Subtraindo o investimento inicial:
+
+$$
+\text{VPL} = 826.989 - 800.000 = 26.989
+$$
+
+#### Cálculo do VPL do Projeto 1
+
+<br>
+
+$$
+\text{VPL} = \frac{110.000}{(1 + 0,10)^1} + \frac{110.000}{(1 + 0,10)^2} + \frac{110.000}{(1 + 0,10)^3} + \frac{110.000}{(1 + 0,10)^4} + \frac{110.000}{(1 + 0,10)^5} - 500.000
+$$
+
+Calculando cada termo:
+
+$$
+\frac{110.000}{(1 + 0,10)^1} = 99.090
+$$
+
+$$
+\frac{110.000}{(1 + 0,10)^2} = 90.082
+$$
+
+$$
+\frac{110.000}{(1 + 0,10)^3} = 81.893
+$$
+
+$$
+\frac{110.000}{(1 + 0,10)^4} = 74.448
+$$
+
+$$
+\frac{110.000}{(1 + 0,10)^5} = 67.676
+$$
+
+Somando os termos:
+
+$$
+99.090 + 90.082 + 81.893 + 74.448 + 67.676 = 413.189
+$$
+
+Subtraindo o investimento inicial:
+
+$$
+\text{VPL} = 413.189 - 500.000 = -86.811
+$$
+
+**Interpretação:**
+
+- O Projeto 1 tem um VPL positivo (R$ 26.989), o que indica que ele gera valor acima da taxa de desconto.
+- O Projeto 2 tem um VPL negativo (R$ -86.811), o que sugere que ele não cobre o custo de capital.
+
+### **Conclusão:**
+
+**Com base nos cálculos de Payback e VPL:**
+
+- **Projeto 1 (Plataforma de Adoção de Animais)** é mais vantajoso porque tem um Payback mais rápido e um VPL positivo, indicando que é mais provável gerar valor acima do custo de capital.
+- **Projeto 2 (Aplicação para Academias)** tem um Payback mais longo e um VPL negativo, sugerindo que não é tão atrativo do ponto de vista financeiro.
+
+Portanto, a empresa deve selecionar o **Projeto 1**, pois apresenta melhor retorno financeiro e menor tempo para recuperação do investimento inicial.
+
+## Passo 4
 
 ### Estrutura Analítica do Projeto (EAP) - Plataforma de Adoção de Animais
 
