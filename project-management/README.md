@@ -118,6 +118,8 @@ Estas prioridades formam a base essencial do projeto. Elas garantem que a plataf
 
 Elementos como o sistema de mensagens, a seção educativa e a integração com redes sociais, embora valiosos, têm menor prioridade inicial e podem ser implementados em fases subsequentes do desenvolvimento, após as funcionalidades core estarem estabelecidas e funcionando adequadamente.
 
+<br>
+
 ## Passo 3
 
 Para avaliar qual projeto é mais vantajoso, podemos usar dois critérios principais: Payback e Valor Presente Líquido (VPL). Vou calcular ambos para os projetos e depois compará-los.
