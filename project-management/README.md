@@ -82,3 +82,140 @@ gantt
     Teste beta com grupo selecionado de usuários: milestone, rev4, 01-04-2024, 1d
     Revisão final antes do lançamento: milestone, rev5, 29-04-2024, 1d
 ```
+
+**Passo 4**
+
+### Estrutura Analítica do Projeto (EAP) - Plataforma de Adoção de Animais
+
+#### 1. **Iniciação**
+
+- Definição do escopo do projeto
+- Identificação das partes interessadas
+- Desenvolvimento do termo de abertura do projeto
+
+#### 2. **Planejamento**
+
+- Criação do plano de gerenciamento do projeto
+- Definição dos requisitos do projeto
+- Desenvolvimento do cronograma do projeto
+- Orçamento e alocação de recursos
+- Planejamento da comunicação
+- Planejamento de riscos
+
+#### 3. **Design**
+
+- **Design da Interface**
+  - Desenvolvimento dos wireframes
+  - Design visual da interface
+- **Design do Sistema**
+  - Arquitetura do sistema
+  - Modelagem do banco de dados
+- **Design de Funcionalidades**
+  - Sistema de busca e filtragem
+  - Sistema de agendamento de visitas
+
+#### 4. **Desenvolvimento**
+
+- **Desenvolvimento do Back-End**
+  - Configuração do servidor
+  - Desenvolvimento de APIs
+  - Implementação de sistema de autenticação
+- **Desenvolvimento do Front-End**
+  - Implementação da interface do usuário
+  - Integração com o back-end
+- **Banco de Dados**
+  - Criação e configuração do banco de dados
+  - População de dados iniciais
+
+#### 5. **Testes**
+
+- **Testes de Unidade**
+  - Testes de componentes individuais
+- **Testes de Integração**
+  - Testes de integração entre módulos
+- **Testes de Usabilidade**
+  - Avaliação da experiência do usuário
+- **Testes de Performance**
+  - Testes de carga e desempenho
+
+#### 6. **Implantação**
+
+- **Lançamento da Versão Beta**
+  - Preparação do ambiente de produção
+  - Implementação da versão beta
+- **Lançamento Oficial**
+  - Preparação para o lançamento
+  - Lançamento para o público geral
+
+#### 7. **Revisões e Manutenção**
+
+- **Revisões com o Cliente**
+  - Aprovação do conceito e wireframes
+  - Revisão do design da interface
+  - Demonstração do protótipo
+  - Teste beta e revisão final
+- **Manutenção Pós-Lançamento**
+  - Correção de bugs
+  - Atualizações e melhorias contínuas
+
+#### 8. **Encerramento**
+
+- Avaliação do projeto
+- Documentação final
+- Reunião de encerramento com as partes interessadas
+
+### Tabela EAP
+
+| **ID** | **Descrição**                | **Responsável**           | **Data de Início** | **Data de Término** |
+| ------ | ---------------------------- | ------------------------- | ------------------ | ------------------- |
+| 1      | Iniciação                    | Equipe de Gerenciamento   | 01-01-2024         | 07-01-2024          |
+| 2      | Planejamento                 | Equipe de Gerenciamento   | 08-01-2024         | 21-01-2024          |
+| 3      | Design                       | Designer/UI/UX            | 22-01-2024         | 28-02-2024          |
+| 3.1    | Design da Interface          | Designer/UI/UX            | 22-01-2024         | 04-02-2024          |
+| 3.2    | Design do Sistema            | Arquiteto de Sistemas     | 05-02-2024         | 18-02-2024          |
+| 3.3    | Design de Funcionalidades    | Equipe de Desenvolvimento | 19-02-2024         | 28-02-2024          |
+| 4      | Desenvolvimento              | Desenvolvedores           | 29-02-2024         | 18-05-2024          |
+| 4.1    | Desenvolvimento do Back-End  | Desenvolvedores Back-End  | 29-02-2024         | 29-03-2024          |
+| 4.2    | Desenvolvimento do Front-End | Desenvolvedores Front-End | 30-03-2024         | 26-04-2024          |
+| 4.3    | Banco de Dados               | DBA                       | 27-04-2024         | 18-05-2024          |
+| 5      | Testes                       | Equipe de Testes          | 19-05-2024         | 09-06-2024          |
+| 5.1    | Testes de Unidade            | Equipe de Testes          | 19-05-2024         | 24-05-2024          |
+| 5.2    | Testes de Integração         | Equipe de Testes          | 25-05-2024         | 29-05-2024          |
+| 5.3    | Testes de Usabilidade        | Equipe de Testes          | 30-05-2024         | 02-06-2024          |
+| 5.4    | Testes de Performance        | Equipe de Testes          | 03-06-2024         | 09-06-2024          |
+| 6      | Implantação                  | Equipe de Implantação     | 10-06-2024         | 15-06-2024          |
+| 6.1    | Lançamento da Versão Beta    | Equipe de Implantação     | 10-06-2024         | 13-06-2024          |
+| 6.2    | Lançamento Oficial           | Equipe de Implantação     | 14-06-2024         | 15-06-2024          |
+| 7      | Revisões e Manutenção        | Equipe de Suporte         | 16-06-2024         | 31-12-2024          |
+| 7.1    | Revisões com o Cliente       | Equipe de Gerenciamento   | 16-06-2024         | 30-06-2024          |
+| 7.2    | Manutenção Pós-Lançamento    | Equipe de Suporte         | 01-07-2024         | 31-12-2024          |
+| 8      | Encerramento                 | Equipe de Gerenciamento   | 01-01-2025         | 07-01-2025          |
+
+<br>
+
+### Diagrama da EAP
+
+```mermaid
+graph TD
+    A[Iniciação] --> B[Planejamento]
+    B --> C[Design]
+    C --> C1[Design da Interface]
+    C --> C2[Design do Sistema]
+    C --> C3[Design de Funcionalidades]
+    B --> D[Desenvolvimento]
+    D --> D1[Desenvolvimento do Back-End]
+    D --> D2[Desenvolvimento do Front-End]
+    D --> D3[Banco de Dados]
+    B --> E[Testes]
+    E --> E1[Testes de Unidade]
+    E --> E2[Testes de Integração]
+    E --> E3[Testes de Usabilidade]
+    E --> E4[Testes de Performance]
+    B --> F[Implantação]
+    F --> F1[Lançamento da Versão Beta]
+    F --> F2[Lançamento Oficial]
+    B --> G[Revisões e Manutenção]
+    G --> G1[Revisões com o Cliente]
+    G --> G2[Manutenção Pós-Lançamento]
+    B --> H[Encerramento]
+```
