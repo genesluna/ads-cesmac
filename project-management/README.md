@@ -56,17 +56,17 @@
 
 ```mermaid
 gantt
-    title Projeto: Plataforma de Adoção de Animais
+    title  Diagrama de Gantt
     dateFormat  DD-MM-YYYY
     axisFormat %d-%m
     excludes    weekends
 
     section Design
-    Finalização do design e wireframes: done, des1, 01-01-2024, 4w
+    Finalização do design e wireframes: active, des1, 01-01-2024, 4w
 
     section Desenvolvimento
-    Desenvolvimento do back-end básico: done, dev1, 29-01-2024, 4w
-    Implementação do front-end e integração com o back-end: active, dev2, 26-02-2024, 4w
+    Desenvolvimento do back-end básico: active, dev1, 29-01-2024, 4w
+    Implementação do front-end e integração com o back-end: dev2, 26-02-2024, 4w
 
     section Testes
     Testes de usabilidade e correções: crit, test1, 25-03-2024, 2w
