@@ -196,8 +196,7 @@ gantt
 ### Diagrama da EAP
 
 ```mermaid
-%%{init: {"flowchart": {"defaultRenderer": "elk"}} }%%
-graph TD
+graph LR
     A[Iniciação] --> B[Planejamento]
     B --> C[Design]
     C --> C1[Design da Interface]
