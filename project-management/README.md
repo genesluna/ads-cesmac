@@ -269,6 +269,8 @@ $$
 
 Portanto, a empresa deve selecionar o **Projeto 1**, pois apresenta melhor retorno financeiro e menor tempo para recuperação do investimento inicial.
 
+<br>
+
 ## Passo 4
 
 ### Estrutura Analítica do Projeto (EAP) - Plataforma de Adoção de Animais
