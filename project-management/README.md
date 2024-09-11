@@ -406,4 +406,8 @@ graph LR
     G --> G1[Revisões com o Cliente]
     G --> G2[Manutenção Pós-Lançamento]
     B --> H[Encerramento]
+    B --> H1[Avaliação do projeto]
+    B --> H2[Documentação final]
+    B --> H3[Reunião de encerramento]
 ```
+
