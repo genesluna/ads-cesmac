@@ -273,7 +273,7 @@ Portanto, a empresa deve selecionar o **Projeto 1**, pois apresenta melhor retor
 
 ## Passo 4
 
-### Estrutura Analítica do Projeto (EAP) - Plataforma de Adoção de Animais
+### EAP - Plataforma de Adoção de Animais
 
 #### 1. **Iniciação**
 
